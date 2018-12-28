@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} Opção {% endblock %}
+{% block  container %}	
+
+<main>
+	<aside>
+		<head>
+			<h3>Configuração</h3>
+		</head>
+	</aside>
+
+	<div class="row">
+	
+		<div class="col-md-6" style='height: 650px;'>
+
+			<article>		
+				<aside>
+				    <div class="card" style="width: 25rem;">
+				      	 <div class="card-body">
+				     		 <h5 class="card-title">Cliente</h5>
+				     		 <p class="card-text">Deseja adicionar um cliente.</p>
+				     		 <a href="{% url 'novoCliente' %}" class="btn btn-primary">New</a>
+				   		 </div><!--body-->
+                   </div><!--card -->
+				</aside>		
+			</article>
+
+		</div><!--col -->
+		<div class="col-md-5">
+
+	
+		</div><!--col -->
+	
+	</div><!-- row -->
+</main> 
+
+{% endblock %}

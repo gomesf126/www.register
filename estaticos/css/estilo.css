@@ -1,0 +1,30 @@
+footer{
+	width: 100%;
+	height:auto;
+  margin-top: 50px;
+	text-align: center;
+
+}
+article{
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.header-card{
+	margin-bottom: 20px;
+}
+
+
+.aside-card-es{
+	float: left;
+}
+.aside-card-di{
+	float: right;
+}
+h3{
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.container{
+	height: 900px;
+}

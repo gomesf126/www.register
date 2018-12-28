@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %} Listar cliente {% endblock %}
+{% block container %}
+
+<main>
+	<div class="row">
+		<div class="col-md">
+			
+		</div><!--col -->
+
+		<div class="col-md-10" style='height: 670px'>
+			<article>
+				<header>
+					<h3>Clientes</h3>	
+				</header><!-- /header -->
+			   <div class="box-body table-responsive no-padding">
+		           <table class="table table-hover">
+			            <tr>
+			              <th>ID</th>
+			              <th>Nome</th>
+			              <th>Sobrenome</th>  
+			              <th> </th>    
+			              <th></th>    
+			            </tr>
+			            {% for cliente in clientes %}
+				            <tr>
+				              <td>{{cliente.id}}</td>
+				               <td>{{cliente.nome}}</td>
+				               <td>{{cliente.sobre_nome}}</td>       
+				               <td><a href="{% url 'atualizarCliente' cliente.id  %}" class="badge badge-success">Atualizar</a></td>    
+				               <td><a href="{% url 'deletarCliente' cliente.id  %}" class="badge badge-danger">deletar</a></td>   
+				            </tr>
+			            {% endfor %}      
+		          </table>   
+	       	   </div><!-- box-body -->
+			</article>
+		</div><!--col -->
+		<div class="col-md">
+			
+		</div><!--col -->
+	</div><!-- row -->
+</main> 
+
+{% endblock %}
+

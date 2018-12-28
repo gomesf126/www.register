@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block title %} Opção {% endblock %}
+{% block  container %}	
+
+<div class="row">
+	<div class="col-md">
+		
+	</div><!--col-->
+	<div class="col-md">
+	
+
+	   <div class="card" style="margin:25px; width: 600px ; height: 650px;">
+		  <h5 class="card-header">Cadastro de clientes</h5>
+		  <div class="card-body">
+		    <h5 class="card-title">Cadastre aqui</h5>
+		   	<form action="{% url 'novoCliente' %}" method="post" accept-charset="utf-8" class="form">
+				  {% csrf_token %}
+			      {% bootstrap_form form %}	
+			      {% buttons %}
+			      <button class="btn btn-primary" type="submit">Salvar</button>
+			      {% endbuttons %}
+	       </form>	
+		  </div>
+	   </div>
+
+	</div><!--col-->
+	<div class="col-md">
+		
+	</div><!--col-->
+</div><!--row -->
+
+{% endblock %}
+
+
+	
